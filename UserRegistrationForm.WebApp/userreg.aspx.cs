@@ -24,7 +24,7 @@ namespace UserRegistrationForm.WebApp
                     string insertQuery = @"INSERT INTO [dbo].[useRegi_tbl]
                                            ([email],[pass],[fname],[lname],[address],[phone],[gender],[dob])
                                            VALUES
-                                           (@email, @pass, @fname, @lname, @address, @phone, @gender, @dob)";
+                                           (@email, @pass, @fname, @lname, @address, @phone, @gender, DEFAULT)";
 
                     using (SqlCommand cmd = new SqlCommand(insertQuery, con))
                     {
